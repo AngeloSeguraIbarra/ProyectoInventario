@@ -1,4 +1,4 @@
-// Librerias 
+
 #include <iostream>
 #include "herramientas.h"
 #include "inventario2.h"   
