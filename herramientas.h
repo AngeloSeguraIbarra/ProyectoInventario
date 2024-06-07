@@ -1,3 +1,13 @@
+/*
+ *
+ * Proyecto Inventario
+ * Angelo Segura Ibarra
+ * A01711723
+ * 06/06/2024
+ * Esta clase defina objeto de tipo Empleado que contiene las clases heredadas
+ * de Dado,Llave, Electrica
+ */
+
 #ifndef HERRAMIENTAS_H_
 #define HERRAMIENTAS_H_
 
@@ -5,14 +15,16 @@
 #include <string>
 #include <iostream>
 
-// Clase Madre 
+// Clase que es declarada como Abstracta 
 class Herramienta {
+// Atributos
 private:
     std::string nombre;
     std::string marca;
     int cantidad;
     double precio;
 
+// Metodos 
 public:
     // Sobrecarga de constructores
     Herramienta(std::string name, std::string marc, int cant, double prec);
@@ -26,8 +38,8 @@ public:
     double get_precio(void);
 
     // Métodos virtuales
-    virtual double calcular_precio(void);
-    virtual void descripcion_herramienta()=0; // Se declara la clase como abstracta 
+    virtual double calcular_precio(void)=0; // Metodo abstracto
+    virtual void descripcion_herramienta()=0; // Metodo abstracto
 };
 
 // Métodos de Herramienta
