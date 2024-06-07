@@ -1,9 +1,11 @@
 #ifndef HERRAMIENTAS_H_
 #define HERRAMIENTAS_H_
 
+// Librerias 
 #include <string>
 #include <iostream>
 
+// Clase Madre 
 class Herramienta {
 private:
     std::string nombre;
@@ -25,7 +27,7 @@ public:
 
     // Métodos virtuales
     virtual double calcular_precio(void);
-    virtual void descripcion_herramienta();
+    virtual void descripcion_herramienta()=0; // Se declara la clase como abstracta 
 };
 
 // Métodos de Herramienta
