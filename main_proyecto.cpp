@@ -1,6 +1,7 @@
+// Librerias 
 #include <iostream>
 #include "herramientas.h"
-#include "inventario2.h"
+#include "inventario2.h"   
 
 int main() {
     // Crear el inventario
