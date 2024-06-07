@@ -1,9 +1,11 @@
 #ifndef INVENTARIO2_H_
 #define INVENTARIO2_H_
 
+// Librerias 
 #include <string>
 #include <iostream>
 #include "herramientas.h"
+
 
 class Inventario {
 private:
@@ -12,8 +14,6 @@ private:
 
 public:
     Inventario() : num_herramientas(0) {}
-    ~Inventario();
-
     void imprimir_inventario();
     void agregar_herramienta(Herramienta* nueva);
     void eliminar_herramienta(const std::string& nombre);
@@ -21,12 +21,6 @@ public:
 };
 
 // Implementación de los métodos de Inventario
-Inventario::~Inventario() {
-    for (int i = 0; i < num_herramientas; ++i) {
-        delete inven[i];
-    }
-}
-
 void Inventario::imprimir_inventario() {
     for (int i = 0; i < num_herramientas; ++i) {
         inven[i]->descripcion_herramienta();
